@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "c7e37c70-2bf2-405c-9111-d3247794462a",
+		"name": "upsert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6313911",
+		"_collection_link": "https://orange-astronaut-658764.postman.co/workspace/New-Team-management~f9b3c82f-0948-430c-80fa-5a36b1fe0e39/collection/6313911-c7e37c70-2bf2-405c-9111-d3247794462a?action=share&source=collection_link&creator=6313911"
+	},
+	"item": [
+		{
+			"name": "svoe search dvla",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlJxZFg0bTM5VHZyUDVKZnlsZmQ1MjdnUnRmTV9SUzI1NiIsInBpLmF0bSI6Imk5NG0ifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIHJlYWQgY3VzdGFwaS5jb21wc2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmV0c2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmxveXNlYXJjaC5yZWFkX29ubHkgbG95YWx0eVByb2dyYW0uc3RhdHVzVHJhY2tlci5yZWFkIiwiYXV0aG9yaXphdGlvbl9kZXRhaWxzIjpbXSwiY2xpZW50X2lkIjoiT01QX09tbmlwcm9PcGVyYXRpb25zX09JREMiLCJpc3MiOiJodHRwczovL3NzYWEuZGVsdGEuY29tIiwianRpIjoibGJDdlJ4NUlhNlRXMDAzbnB4MDFaVWgyaEhORmxvVEoiLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQyIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IjIxMjU2ODMiLCJwcHIiOiIwMDIxMjU2ODMiLCJyb2xlcyI6WyJPbW5pUHJvT3RoZXJEaXZpc2lvbnMiLCJPbW5pUHJvQXhpc0dBT3RoZXJEaXZpc2lvbnMiLCJPbW5pUHJvQWRtaW5Db25zb2xlQWxsIiwiT21uaVByb1N5bXBob255QWxsIiwiT21uaVByb0FkbWluQ29uc29sZVBpbG90IiwiT21uaVByb1N5bXBob255UGlsb3QiLCJPbW5pUHJvQmFzaWMiLCJPbW5pUHJvQWxsIl0sInByZWZlcnJlZF91c2VybmFtZSI6InYyNTY4MyIsImdpdmVuX25hbWUiOiJNYXJpYW5hbmN5IiwiZmFtaWx5X25hbWUiOiJQcml5YWRhcnNpbmkiLCJpYXQiOjE3MjQ4MjA3MzYsImVtYWlsIjoibWFyaWFuYW5jeS5wcml5YWRhcnNpbmlAZGVsdGEuY29tIiwiZXhwIjoxNzI0ODIxNjM2fQ.dfxDutkA84xtB9UEIvAP0ElJNta1Qf_SVFeqZZShu7y9bs3iDnTbb5zkEfCxQLkj6wtcEEsOfsgRbUpTRU2H57sLC94z1pF3iAjkxZnpV_qHLS7CgUGpC3qCNbo_vvmlFFoAF2Fd9DTaSecYas7x9mWVuu7rPgwyo4fXNTOlmkZNO-NNxcziAbid_SRoftKPHEkpOy-rDOxXs8pZyzViGvsCF9B1RlhhsywqmtNOmnqGBwK-FfOsAGIOwj1c_BjKNrT565xmw-hCWyt6fKzzuq25oyYuCnrzeucJJ1NQsyW-T4QJgthJaysuASO7oOw0hL-GaZSvVnJgGwpG4UV9Lw",
+						"type": "text"
+					},
+					{
+						"key": "X-UserContext",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlJxZFg0bTM5VHZyUDVKZnlsZmQ1MjdnUnRmTV9SUzI1NiIsInBpLmF0bSI6Imk5NG0ifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIHJlYWQgY3VzdGFwaS5jb21wc2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmV0c2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmxveXNlYXJjaC5yZWFkX29ubHkgbG95YWx0eVByb2dyYW0uc3RhdHVzVHJhY2tlci5yZWFkIiwiYXV0aG9yaXphdGlvbl9kZXRhaWxzIjpbXSwiY2xpZW50X2lkIjoiT01QX09tbmlwcm9PcGVyYXRpb25zX09JREMiLCJpc3MiOiJodHRwczovL3NzYWEuZGVsdGEuY29tIiwianRpIjoibGJDdlJ4NUlhNlRXMDAzbnB4MDFaVWgyaEhORmxvVEoiLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQyIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IjIxMjU2ODMiLCJwcHIiOiIwMDIxMjU2ODMiLCJyb2xlcyI6WyJPbW5pUHJvT3RoZXJEaXZpc2lvbnMiLCJPbW5pUHJvQXhpc0dBT3RoZXJEaXZpc2lvbnMiLCJPbW5pUHJvQWRtaW5Db25zb2xlQWxsIiwiT21uaVByb1N5bXBob255QWxsIiwiT21uaVByb0FkbWluQ29uc29sZVBpbG90IiwiT21uaVByb1N5bXBob255UGlsb3QiLCJPbW5pUHJvQmFzaWMiLCJPbW5pUHJvQWxsIl0sInByZWZlcnJlZF91c2VybmFtZSI6InYyNTY4MyIsImdpdmVuX25hbWUiOiJNYXJpYW5hbmN5IiwiZmFtaWx5X25hbWUiOiJQcml5YWRhcnNpbmkiLCJpYXQiOjE3MjQ4MjA3MzYsImVtYWlsIjoibWFyaWFuYW5jeS5wcml5YWRhcnNpbmlAZGVsdGEuY29tIiwiZXhwIjoxNzI0ODIxNjM2fQ.dfxDutkA84xtB9UEIvAP0ElJNta1Qf_SVFeqZZShu7y9bs3iDnTbb5zkEfCxQLkj6wtcEEsOfsgRbUpTRU2H57sLC94z1pF3iAjkxZnpV_qHLS7CgUGpC3qCNbo_vvmlFFoAF2Fd9DTaSecYas7x9mWVuu7rPgwyo4fXNTOlmkZNO-NNxcziAbid_SRoftKPHEkpOy-rDOxXs8pZyzViGvsCF9B1RlhhsywqmtNOmnqGBwK-FfOsAGIOwj1c_BjKNrT565xmw-hCWyt6fKzzuq25oyYuCnrzeucJJ1NQsyW-T4QJgthJaysuASO7oOw0hL-GaZSvVnJgGwpG4UV9Lw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n   \"employeePPR\": \"079145100\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/upsert",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "svoe search dvla Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjRPS1RKSkxqR0w4TDVIcXlSRGVqYk1KdGhZbyJ9.eyJzdWIiOiIxNTYxNTYxIiwiYXVkIjoib21uaXByb19vaWRjIiwianRpIjoia1FobkZyQ2VQdVl5ZXptUEljNGVaSCIsImlzcyI6Imh0dHBzOi8vc3NhYXNpLmRlbHRhLmNvbSIsImlhdCI6MTY1Mjc3MDQ1OCwiZXhwIjoxNjUyNzcwNzU4LCJhdXRoX3RpbWUiOjE2NTI3NzA0NTcsImRsbWlkIjoiMTU2MTU2MSIsInVwZGF0ZWRfYXQiOjE2NTI3NzAyMzYsInBwcl9udW1iZXIiOiIwMDE1NjE1NjEiLCJuYW1lIjoiTWFnZXNoLCBEZWVuYWJhbmRodSIsInN0YXRpb24iOiJNQUEiLCJ0ZXN0Z3JvdXBzIjoiZmFsc2UiLCJvbW5pcHJvX3JvbGVzIjpbIk9tbmlQcm9TeW1waG9ueUFsbCIsIk9tbmlQcm9BZG1pbkNvbnNvbGVQaWxvdCIsIk9tbmlQcm9TeW1waG9ueVBpbG90IiwiT21uaVByb1N1cHBvcnQiLCJPbW5pUHJvQWxsIl0sInByZWZlcnJlZF91c2VybmFtZSI6InA2MTU2MSIsImdpdmVuX25hbWUiOiJEZWVuYWJhbmRodSIsIm1pZGRsZV9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiJNYWdlc2giLCJwaS5zcmkiOiJMN0M5aDZDa1M4bGo0cTVPSWNrYUNuWTVHQzQuLmcwYUQiLCJub25jZSI6IjZmMTg4OGNjLTY5YmItNGMxNC05YzBmLTNiMDJhOTQ4NmE4YyJ9.VZm3ynavwzUaqj-sNPlpakOt-_9burlRotS45LcHw28rfv2xrn-R8ILWBvneejlV3iU6ftNeeFXkeJawWE3wZX6Y3PGAbh3AN6eDZgs2z8TLSIy0lmqPIF9URPm6r5Vuq8cjR8rERZOpujXvrAvYoKIXCOrQW-FoSQFMIO1F_alXsZgQOBriimrbcE5UhU19_pif47dElGYarDylQRUxpGobw3D8eGdgU47HTiVN9D3mAsQc-iKGOcA7g5d-P8_yQ8ckbdfZSqBObXH1PhuA4ovjc09y3y4VrlM-XV5oAVyEeM53NiR21Vr5UPX01UKPwl7gPFOFZZCNf5Jh_NSmOw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hierarchyType\": \"D\",\r\n    \"hierarchyLevel\": 1,\r\n    \"employee\": {\r\n        \r\n            \"employeePPR\": \"017440600\"\r\n        \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7fxoq3myh5-vpce-001b7e94e6247683b.execute-api.us-east-1.amazonaws.com/prod/svoe/employees/v1/hierarchy",
+					"protocol": "https",
+					"host": [
+						"7fxoq3myh5-vpce-001b7e94e6247683b",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"svoe",
+						"employees",
+						"v1",
+						"hierarchy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "svoe upsert si",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImlmbkwtSHhWa2hSVE9oMXN2dDZqNjgwdTFCWSIsInBpLmF0bSI6IjIxMWcifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGN1c3RhcGkuY29tcHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5ldHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5sb3lzZWFyY2gucmVhZF9vbmx5IGxveWFsdHlQcm9ncmFtLnN0YXR1c1RyYWNrZXIucmVhZCIsImNsaWVudF9pZCI6Ik9NUF9PbW5pcHJvT3BlcmF0aW9uc19PSURDX1NJIiwiaXNzIjoiaHR0cHM6Ly9zc2Fhc2kuZGVsdGEuY29tIiwianRpIjoibGhJV2w4Z1MzSmVKeU1ZMnZqTzRPSDc1UHJsRGhoVk8iLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQ19TSSIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IiIsInBwciI6IjAwMjEyNTY4MyIsInJvbGVzIjpbIk9tbmlQcm9BeGlzR0FPdGhlckRpdmlzaW9ucyIsIk9tbmlQcm9BZG1pbkNvbnNvbGVBbGwiLCJPbW5pUHJvU3ltcGhvbnlBbGwiLCJPbW5pUHJvQWRtaW5Db25zb2xlUGlsb3QiLCJPbW5pUHJvU3ltcGhvbnlQaWxvdCIsIk9tbmlQcm9BbGwiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidjI1NjgzIiwiZ2l2ZW5fbmFtZSI6Ik1hcmlhbmFuY3kiLCJmYW1pbHlfbmFtZSI6IlByaXlhZGFyc2luaSIsImlhdCI6MTY4NTQzNDA4MSwiZW1haWwiOiJtYXJpYW5hbmN5LnByaXlhZGFyc2luaUBkZWx0YS5jb20iLCJleHAiOjE2ODU0MzQ5ODF9.gK5no62Gowc89I0M074JpiOJJY4bngyaHjJzMUDE0rajTHrS6qKNDpa0mOPglHpZHSyBFbI3f2Bb2xP9XxakPL2lVhS-E_ebmsDUoFU5qjkIa7Vl-fCyo9nWYyn6poPlEhFKE8QyjRpEyx1nidTG7fo_9KDarSv9FAlUtPFd_EQi5Kgw84F63dsFvG_Hm_ifm1B67laxJrogIV4wRUaJAja7sQu6j8NAvg1F4CQVdYbJzccWU0N6kzSKi-7q9y88--GRMfPF3fG7G-yR0MFfqoB_9kpjDqIxyiunU4EB0m-e_btB6-lCaRt9fcRrsR2Jf4VcR61-velKB78FQ7M9Ug",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employees\": [\r\n        {  \r\n\r\n             \"profile\": {\r\n                \"employeePPR\": \"050508300\",\r\n                \"employeePPRShort\": \"505083\",\r\n                \"firstName\": \"CLARITA\",\r\n                \"lastName\": \"AEKINS\",\r\n                \"middleName\": \"pastrana\",\r\n                \"lastHireDate\": \"20211206\",\r\n                \"emailAddress\": \"FIRSTNAME.LASTNAME@DELTA.COM\"\r\n            },\r\n            \"status\": {\r\n                \"employmentStatus\": \"I\",\r\n                \"employmentEffectiveDate\": \"2022-02-19T12:02:29.417Z\",\r\n                \"employmentType\": \"Hourly\"\r\n            },\r\n            \"organization\": {\r\n                \"managerPPR\": \"096485800\",\r\n                \"managerPPRShort\": \"964858\",\r\n                \"managerEffectiveDate\": \"2022-02-19T12:02:29.417Z\",\r\n                \"division\": \"RES\",\r\n                \"deptNumber\": \"6540\",\r\n                \"assignmentGroup\": \"[{\\\"roleName\\\":\\\"LST\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"SDA\\\",\\\"roleAssignedStatus\\\":false,\\\"subRoles\\\":[{\\\"roleName\\\":\\\"EEC\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"FTS(Field Technology Support)\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Executive Correspondence\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"other SDA\\\",\\\"roleAssignedStatus\\\":false}]},{\\\"roleName\\\":\\\"Care Team\\\",\\\"roleAssignedStatus\\\":true},{\\\"roleName\\\":\\\"PIC\\\",\\\"roleAssignedStatus\\\":true},{\\\"roleName\\\":\\\"Operations Desk Backup\\\",\\\"roleAssignedStatus\\\":true},{\\\"roleName\\\":\\\"Brand Advisor Reserve\\\",\\\"roleAssignedStatus\\\":true}]\"\r\n            },\r\n            \"team\": {\r\n                \"supervisorPPR\": \"NA\",\r\n                \"supervisorPPRShort\": \"NA\",\r\n                \"teamEffectiveDate\": \"2023-06-01T15:08:00.560Z\"\r\n            },\r\n            \"position\": {\r\n                \"jobTitle\": \"CUSTOMER EXPER SPECIALIST\",\r\n                \"orgRole\": \"BA\",\r\n                \"workAtHomeIndicator\": \"N\"\r\n            },\r\n            \"location\": {\r\n                \"locationCityCode\": \"AGS\",\r\n                \"locationTimeZone\": \"EST\",\r\n                \"locationEffectiveDate\": \"2022-02-19T12:02:29.417Z\"\r\n            },\r\n            \"lineOfBusiness\": {\r\n                \"lineOfBusinessCode\": \"SkyMiles Sales & Service\",\r\n                \"lineOfBusinessEffectiveDate\": \"2022-05-11T12:15:50.356Z\"\r\n            },\r\n            \"routingProfile\": {},\r\n            \"connectSecurityProfiles\": {\r\n                \"securityProfile\": \"[{\\\"id\\\":\\\"arn:aws:connect:us-east-1:387009947772:instance/04aafb59-e653-4c31-a873-b4afd1c1ee33/security-profile/2e2916bd-0dae-4dbf-8f28-bd41b09863ad\\\",\\\"text\\\":\\\"Admin\\\",\\\"checked\\\":true,\\\"disabled\\\":false},{\\\"id\\\":\\\"arn:aws:connect:us-east-1:387009947772:instance/04aafb59-e653-4c31-a873-b4afd1c1ee33/security-profile/1da798e4-97b8-4e60-be4f-b076ac418081\\\",\\\"text\\\":\\\"BA\\\"}]\",\r\n                \"securityProfileEffectiveDate\": \"2023-05-17T09:57:10.840Z\"\r\n            },\r\n            \"language\": {},\r\n            \"avaya\": {},\r\n            \"lastUpdateId\": \"SYSTEM\",\r\n            \"lastUpdateSource\": \"SYSTEM\",\r\n            \"lastUpdateDate\": \"2023-06-01T15:08:00.560Z\"\r\n        }\r\n        \r\n       \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/upsert",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "svoe upsert dvla",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IktDQ0VfQTc0dGRHTmZFeTZaTWtjVlNDeGw0QSJ9.eyJzdWIiOiIxNTYxNTYxIiwiYXVkIjoib21uaXByb19vaWRjIiwianRpIjoibUZrZkNvdVpBZVhVU1lpOGNYUWlQWiIsImlzcyI6Imh0dHBzOi8vc3NhYXNpLmRlbHRhLmNvbSIsImlhdCI6MTY1MjE4NjgwNSwiZXhwIjoxNjUyMTg3MTA1LCJhdXRoX3RpbWUiOjE2NTIxODY4MDMsImRsbWlkIjoiMTU2MTU2MSIsInVwZGF0ZWRfYXQiOjE2NTIxODQ1MzIsInBwcl9udW1iZXIiOiIwMDE1NjE1NjEiLCJuYW1lIjoiTWFnZXNoLCBEZWVuYWJhbmRodSIsInN0YXRpb24iOiJNQUEiLCJ0ZXN0Z3JvdXBzIjoiZmFsc2UiLCJvbW5pcHJvX3JvbGVzIjpbIk9tbmlQcm9TeW1waG9ueUFsbCIsIk9tbmlQcm9BZG1pbkNvbnNvbGVQaWxvdCIsIk9tbmlQcm9TeW1waG9ueVBpbG90IiwiT21uaVByb1N1cHBvcnQiLCJPbW5pUHJvQWxsIl0sInByZWZlcnJlZF91c2VybmFtZSI6InA2MTU2MSIsImdpdmVuX25hbWUiOiJEZWVuYWJhbmRodSIsIm1pZGRsZV9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiJNYWdlc2giLCJwaS5zcmkiOiJUSzhmWVM4T1NRSXp0bXZ2VkZzY2xhSjBjUVkuLmVsNnAiLCJub25jZSI6IjZmMTg4OGNjLTY5YmItNGMxNC05YzBmLTNiMDJhOTQ4NmE4YyJ9.RcGvdUYO5uKEkfkLR1fI7tjX3Yzxg_pj16ZW0NvJCB6hidawReYgb0D1_a0CtXejHr0qKLDFk-CCBkHrTaViD8dA7WUFayoWlktXpqLnWED458b_o4TBoLAwwYWGRGSVJawphqCQqxm_EgmMXRl1vQTtuOJnJu9C5Ni5EIo0UHKyCwzpYINoGrfnX-QO-OvctGaOyrjWKmNS1J33j1GLl8GiTF1U76gRskCaGD5ip3Bww-aC6tW7kFwb52fHKxZBit9grhapf5JYZyU_Lv97775l4U1-y66mPtJcpp8dRQvipLicpOwFQ66DVUqLWku9lqBtQ4euG3DAmN4Sqkin0w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employees\": [\r\n        {\r\n            \"profile\": {\r\n                \"employeePPR\": \"075236000\"\r\n            },\r\n            \"organization\": {\r\n                \"assignmentGroup\": \"[{\\\"roleName\\\":\\\"LST\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"SDA\\\",\\\"roleAssignedStatus\\\":false,\\\"subRoles\\\":[{\\\"roleName\\\":\\\"EEC\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"FTS(Field Technology Support)\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Executive Correspondence\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"other SDA\\\",\\\"roleAssignedStatus\\\":false}]},{\\\"roleName\\\":\\\"Care Team\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"PIC\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Operations Desk Backup\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Brand Advisor Reserve\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Acting CEM\\\",\\\"roleAssignedStatus\\\":false},{\\\"roleName\\\":\\\"Acting ECM\\\",\\\"roleAssignedStatus\\\":true},{\\\"roleName\\\":\\\"CHE(Central Hiring Event)\\\",\\\"roleAssignedStatus\\\":false}]\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://7fxoq3myh5-vpce-0586f6de6b6464581.execute-api.us-east-1.amazonaws.com/prod/svoe/employees/v1/upsert",
+					"protocol": "https",
+					"host": [
+						"7fxoq3myh5-vpce-0586f6de6b6464581",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"svoe",
+						"employees",
+						"v1",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "svoe search si",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "appId",
+						"value": " AX",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImF3cXFRRVRoT3BaaEFiTWNaTWVlWjR3RHhUbyIsInBpLmF0bSI6IjIxMWcifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIHJlYWQgY3VzdGFwaS5jb21wc2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmV0c2VhcmNoLnJlYWRfb25seSBjdXN0YXBpLmxveXNlYXJjaC5yZWFkX29ubHkgbG95YWx0eVByb2dyYW0uc3RhdHVzVHJhY2tlci5yZWFkIiwiY2xpZW50X2lkIjoiT01QX09tbmlwcm9PcGVyYXRpb25zX09JRENfU0kiLCJpc3MiOiJodHRwczovL3NzYWFzaS5kZWx0YS5jb20iLCJqdGkiOiJaTHpOR3o3WGNHQmo1UmVFelZEa3FzdkRlV2hWTkFQciIsImF1ZCI6Ik9NUF9PbW5pcHJvT3BlcmF0aW9uc19PSURDX1NJIiwic3ViIjoiMjEyNTY4MyIsImRsbWlkIjoiIiwicHByIjoiMDAyMTI1NjgzIiwicm9sZXMiOlsiT21uaVByb0F4aXNHQU90aGVyRGl2aXNpb25zIiwiT21uaVByb0FkbWluQ29uc29sZUFsbCIsIk9tbmlQcm9TeW1waG9ueUFsbCIsIk9tbmlQcm9BZG1pbkNvbnNvbGVQaWxvdCIsIk9tbmlQcm9TeW1waG9ueVBpbG90IiwiT21uaVByb0FsbCJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ2MjU2ODMiLCJnaXZlbl9uYW1lIjoiTWFyaWFuYW5jeSIsImZhbWlseV9uYW1lIjoiUHJpeWFkYXJzaW5pIiwiaWF0IjoxNjkwODc1MTM5LCJlbWFpbCI6Im1hcmlhbmFuY3kucHJpeWFkYXJzaW5pQGRlbHRhLmNvbSIsImV4cCI6MTY5MDg3NjAzOX0.C_VfWgJzMOmugSo5NX3A5leLcPn-w5KPKeSrzj5rG5z6FqF4siSUj990W7uSAHX7JrTl1zfM7-FelKOvb2_6b0ZzFq4xuE9dNeVS7KZ9M4rEYPj1V2R02dzClj3hWIndinXSwYOWT1ZRGmK5abQEsKXQtjSnoyXP8U8-gKbo4FCo7xittl14MxblHozy8Y8kkr5HRNPwM8xGT4uW0Eyt2dpAkMnZ_cdE6JwK8XewDSxuAPTjX6NspYs9IfEW4eEq10AiDkgoHajLVZqfoRqyKmhebst4_bKAlgMJ7c-YuFZCNoxgZjgAEN4WHRLEsYngn_6KoFYCVOk80TaM43twJw",
+						"type": "text"
+					},
+					{
+						"key": "channelId",
+						"value": " AXS",
+						"type": "text"
+					},
+					{
+						"key": "Content-type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": " http://axsd7.delta.com:18063/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": " \"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": " ?0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "transactionId",
+						"value": " 244343556gfg4545543",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-UserContext",
+						"value": " 3545435",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"employeePPR\": \"004653600\"\r\n}\r\n\r\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/retrieve",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "appId",
+						"value": " AX",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkViOVNRSlZoN3o3R2dsNWc5eklZRFkwU0NpayIsInBpLmF0bSI6IjIxMWcifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGN1c3RhcGkuY29tcHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5ldHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5sb3lzZWFyY2gucmVhZF9vbmx5IGxveWFsdHlQcm9ncmFtLnN0YXR1c1RyYWNrZXIucmVhZCIsImNsaWVudF9pZCI6Ik9NUF9PbW5pcHJvT3BlcmF0aW9uc19PSURDX1NJIiwiaXNzIjoiaHR0cHM6Ly9zc2Fhc2kuZGVsdGEuY29tIiwianRpIjoiSEhRZGpueG1EN3dlYlZzMnZKME5YTDNIeWh2MFp2bG8iLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQ19TSSIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IiIsInBwciI6IjAwMjEyNTY4MyIsInJvbGVzIjpbIk9tbmlQcm9BeGlzR0FPdGhlckRpdmlzaW9ucyIsIk9tbmlQcm9BZG1pbkNvbnNvbGVBbGwiLCJPbW5pUHJvU3ltcGhvbnlBbGwiLCJPbW5pUHJvQWRtaW5Db25zb2xlUGlsb3QiLCJPbW5pUHJvU3ltcGhvbnlQaWxvdCIsIk9tbmlQcm9BbGwiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidjI1NjgzIiwiZ2l2ZW5fbmFtZSI6Ik1hcmlhbmFuY3kiLCJmYW1pbHlfbmFtZSI6IlByaXlhZGFyc2luaSIsImlhdCI6MTY4NjgzMDE1MCwiZW1haWwiOiJtYXJpYW5hbmN5LnByaXlhZGFyc2luaUBkZWx0YS5jb20iLCJleHAiOjE2ODY4MzEwNTB9.bZhX0NrCxxF7raQLrf7upp_mU26hmTaLqzebqAkd1MIefSflOeweI4d1r0cao3SrVDROIxMAnjaUjab8rNTFN6h0L_PtnlL8eb0-tZCVl6gtuxwtEy6VsBe7Ygj8MdG0WchaAceP5YYNr21yZLs6PK4jOJRxf_FnfGoy9QnZuBNVodLIPKuvzIZ_9LDzbSavFVkmQz6-_C_0GYFHQJ2FOPNCuUX1l-rk-9YQGNTbidOTUjRFATlYJSCULhcHJwhIDqUTi6o6PlBI-TMX66XVjn_VoIsBGArDsvBPZ67qT7oYF3uPV9aH3qR32Qb2wycyNYfGRxy8epYp5pqZf1xOHg",
+						"type": "text"
+					},
+					{
+						"key": "channelId",
+						"value": " AXS",
+						"type": "text"
+					},
+					{
+						"key": "Content-type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": " http://axsd7.delta.com:18063/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": " \"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": " ?0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "transactionId",
+						"value": " 244343556gfg4545543",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-UserContext",
+						"value": " 3545435",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n   \"employeePPR\": \"050508300\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/retrieve",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heirachy API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "appId",
+						"value": " AX",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkViOVNRSlZoN3o3R2dsNWc5eklZRFkwU0NpayIsInBpLmF0bSI6IjIxMWcifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGN1c3RhcGkuY29tcHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5ldHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5sb3lzZWFyY2gucmVhZF9vbmx5IGxveWFsdHlQcm9ncmFtLnN0YXR1c1RyYWNrZXIucmVhZCIsImNsaWVudF9pZCI6Ik9NUF9PbW5pcHJvT3BlcmF0aW9uc19PSURDX1NJIiwiaXNzIjoiaHR0cHM6Ly9zc2Fhc2kuZGVsdGEuY29tIiwianRpIjoiSEhRZGpueG1EN3dlYlZzMnZKME5YTDNIeWh2MFp2bG8iLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQ19TSSIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IiIsInBwciI6IjAwMjEyNTY4MyIsInJvbGVzIjpbIk9tbmlQcm9BeGlzR0FPdGhlckRpdmlzaW9ucyIsIk9tbmlQcm9BZG1pbkNvbnNvbGVBbGwiLCJPbW5pUHJvU3ltcGhvbnlBbGwiLCJPbW5pUHJvQWRtaW5Db25zb2xlUGlsb3QiLCJPbW5pUHJvU3ltcGhvbnlQaWxvdCIsIk9tbmlQcm9BbGwiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidjI1NjgzIiwiZ2l2ZW5fbmFtZSI6Ik1hcmlhbmFuY3kiLCJmYW1pbHlfbmFtZSI6IlByaXlhZGFyc2luaSIsImlhdCI6MTY4NjgzMDE1MCwiZW1haWwiOiJtYXJpYW5hbmN5LnByaXlhZGFyc2luaUBkZWx0YS5jb20iLCJleHAiOjE2ODY4MzEwNTB9.bZhX0NrCxxF7raQLrf7upp_mU26hmTaLqzebqAkd1MIefSflOeweI4d1r0cao3SrVDROIxMAnjaUjab8rNTFN6h0L_PtnlL8eb0-tZCVl6gtuxwtEy6VsBe7Ygj8MdG0WchaAceP5YYNr21yZLs6PK4jOJRxf_FnfGoy9QnZuBNVodLIPKuvzIZ_9LDzbSavFVkmQz6-_C_0GYFHQJ2FOPNCuUX1l-rk-9YQGNTbidOTUjRFATlYJSCULhcHJwhIDqUTi6o6PlBI-TMX66XVjn_VoIsBGArDsvBPZ67qT7oYF3uPV9aH3qR32Qb2wycyNYfGRxy8epYp5pqZf1xOHg",
+						"type": "text"
+					},
+					{
+						"key": "channelId",
+						"value": " AXS",
+						"type": "text"
+					},
+					{
+						"key": "Content-type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": " http://axsd7.delta.com:18063/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": " \"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": " ?0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "transactionId",
+						"value": " 244343556gfg4545543",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-UserContext",
+						"value": " 3545435",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n   \"employeePPR\": \"050508300\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/retrieve",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBM Testing SI",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "appId",
+						"value": " AX",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkViOVNRSlZoN3o3R2dsNWc5eklZRFkwU0NpayIsInBpLmF0bSI6IjIxMWcifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGN1c3RhcGkuY29tcHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5ldHNlYXJjaC5yZWFkX29ubHkgY3VzdGFwaS5sb3lzZWFyY2gucmVhZF9vbmx5IGxveWFsdHlQcm9ncmFtLnN0YXR1c1RyYWNrZXIucmVhZCIsImNsaWVudF9pZCI6Ik9NUF9PbW5pcHJvT3BlcmF0aW9uc19PSURDX1NJIiwiaXNzIjoiaHR0cHM6Ly9zc2Fhc2kuZGVsdGEuY29tIiwianRpIjoiSEhRZGpueG1EN3dlYlZzMnZKME5YTDNIeWh2MFp2bG8iLCJhdWQiOiJPTVBfT21uaXByb09wZXJhdGlvbnNfT0lEQ19TSSIsInN1YiI6IjIxMjU2ODMiLCJkbG1pZCI6IiIsInBwciI6IjAwMjEyNTY4MyIsInJvbGVzIjpbIk9tbmlQcm9BeGlzR0FPdGhlckRpdmlzaW9ucyIsIk9tbmlQcm9BZG1pbkNvbnNvbGVBbGwiLCJPbW5pUHJvU3ltcGhvbnlBbGwiLCJPbW5pUHJvQWRtaW5Db25zb2xlUGlsb3QiLCJPbW5pUHJvU3ltcGhvbnlQaWxvdCIsIk9tbmlQcm9BbGwiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoidjI1NjgzIiwiZ2l2ZW5fbmFtZSI6Ik1hcmlhbmFuY3kiLCJmYW1pbHlfbmFtZSI6IlByaXlhZGFyc2luaSIsImlhdCI6MTY4NjgzMDE1MCwiZW1haWwiOiJtYXJpYW5hbmN5LnByaXlhZGFyc2luaUBkZWx0YS5jb20iLCJleHAiOjE2ODY4MzEwNTB9.bZhX0NrCxxF7raQLrf7upp_mU26hmTaLqzebqAkd1MIefSflOeweI4d1r0cao3SrVDROIxMAnjaUjab8rNTFN6h0L_PtnlL8eb0-tZCVl6gtuxwtEy6VsBe7Ygj8MdG0WchaAceP5YYNr21yZLs6PK4jOJRxf_FnfGoy9QnZuBNVodLIPKuvzIZ_9LDzbSavFVkmQz6-_C_0GYFHQJ2FOPNCuUX1l-rk-9YQGNTbidOTUjRFATlYJSCULhcHJwhIDqUTi6o6PlBI-TMX66XVjn_VoIsBGArDsvBPZ67qT7oYF3uPV9aH3qR32Qb2wycyNYfGRxy8epYp5pqZf1xOHg",
+						"type": "text"
+					},
+					{
+						"key": "channelId",
+						"value": " AXS",
+						"type": "text"
+					},
+					{
+						"key": "Content-type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": " http://axsd7.delta.com:18063/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": " \"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": " ?0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "transactionId",
+						"value": " 244343556gfg4545543",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": " Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-UserContext",
+						"value": " 3545435",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n   \"employeePPR\": \"050508300\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://svoe-api.rescontactctr-si.aws.delta.com/employee/svoe/employees/v1/retrieve",
+					"protocol": "https",
+					"host": [
+						"svoe-api",
+						"rescontactctr-si",
+						"aws",
+						"delta",
+						"com"
+					],
+					"path": [
+						"employee",
+						"svoe",
+						"employees",
+						"v1",
+						"retrieve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
